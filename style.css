@@ -17,7 +17,7 @@ Default: 1
 Colors:
 Primary - #1c0b19
 Tints - #1a1a1a
-Shades - #72c1ff
+Shades - #72c1ff, #447499
 Accents
 Grey
 
@@ -83,22 +83,78 @@ body {
   mix-blend-mode: unset;
 }
 
+.writing {
+  display: block;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: #f3eff5;
+  margin-right: 1rem;
+}
+
+.writing:hover,
+.writing:active {
+  color: #447499;
+  transition: all 0.3s;
+}
+
 .git-email-link {
   display: flex;
   align-items: center;
   list-style: none;
+  gap: 1rem;
 }
 
 .git-email-link li {
   margin-right: 1.25rem;
 }
 
+.linkend {
+  display: block;
+  position: relative;
+  perspective: 1000px;
+}
+.linkend-image {
+  height: 1.875rem;
+  border-radius: 0.3125rem;
+  opacity: 0.8;
+  outline: none;
+  transition: transform 0.7s ease;
+  -webkit-transition: transform 0.7s ease;
+  -moz-transition: transform 0.7s ease;
+  -ms-transition: transform 0.7s ease;
+  -o-transition: transform 0.7s ease;
+}
+
+.linkend:hover .linkend-image {
+  transform: translateY(-2px) translateZ(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-2px) translateZ(10px);
+  -moz-transform: translateY(-2px) translateZ(10px);
+  -ms-transform: translateY(-2px) translateZ(10px);
+  -o-transform: translateY(-2px) translateZ(10px);
+}
+
 .github {
   display: block;
+  position: relative;
+  perspective: 1000px;
 }
 
 .git-image {
   height: 1.875rem;
+  transition: transform 0.6s ease;
+  -webkit-transition: transform 0.6s ease;
+  -moz-transition: transform 0.6s ease;
+  -ms-transition: transform 0.6s ease;
+  -o-transition: transform 0.6s ease;
+}
+
+.git-image:hover {
+  transform: translateY(-3px) translateZ(10px);
+  -webkit-transform: translateY(-3px) translateZ(10px);
+  -moz-transform: translateY(-3px) translateZ(10px);
+  -ms-transform: translateY(-3px) translateZ(10px);
+  -o-transform: translateY(-3px) translateZ(10px);
 }
 
 .email {
@@ -108,7 +164,8 @@ body {
 }
 
 .email:hover {
-  color: #72c1ff;
+  color: #447499;
+  transition: all 0.3s;
 }
 
 /*****************************/
@@ -174,7 +231,7 @@ body {
   font-size: 1.7em;
   top: -0.4em;
   right: -0.3em;
-  color: #72c1ff;
+  color: #447499;
 }
 
 .About-me {
@@ -218,6 +275,11 @@ body {
   background-color: #555;
 }
 
+.Hero-image-box {
+  position: relative;
+  perspective: 1000px;
+}
+
 .hero-image {
   width: 100%;
   height: auto;
@@ -229,10 +291,19 @@ body {
   backdrop-filter: blur(0.625rem);
   border-radius: 0.9375rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.6s ease;
   -webkit-border-radius: 0.9375rem;
   -moz-border-radius: 0.9375rem;
   -ms-border-radius: 0.9375rem;
   -o-border-radius: 0.9375rem;
+  -webkit-transition: transform 0.6s ease;
+  -moz-transition: transform 0.6s ease;
+  -ms-transition: transform 0.6s ease;
+  -o-transition: transform 0.6s ease;
+}
+
+.hero-image:hover {
+  transform: translateY(-10px) translateZ(20px);
 }
 
 .straightline-2 {
@@ -374,4 +445,37 @@ body {
   font-size: 2rem;
   font-weight: bold;
   color: #333;
+}
+
+.section-blog {
+  background-color: #0d0d0d;
+  padding: 4.8rem 0 9.6rem 0;
+}
+
+.blog-box {
+  max-width: 130rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.blog-heading {
+  float: left;
+}
+.all-article-heading {
+  float: right;
+  clear: both;
+  display: flex;
+}
+.latest {
+  font-size: 2.5rem;
+  color: #f3eff5;
+}
+
+.all-article-link {
+  font-size: 1.5rem;
+  color: #f3eff5;
+  text-decoration: none;
 }
