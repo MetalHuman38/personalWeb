@@ -17,7 +17,7 @@ Default: 1
 Colors:
 Primary - #1c0b19
 Tints - #1a1a1a
-Shades - #72c1ff, #447499
+Shades - #72c1ff, #447499, #223a4c,#172733
 Accents
 Grey
 
@@ -46,12 +46,10 @@ body {
   background-color: #000;
   line-height: 1;
   font-weight: 700;
-  background-image: url("img/chess.jpg");
-  opacity: 0.99;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
+  border: 3px solid #223a4c;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /*****************************/
@@ -67,12 +65,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background-color: #30343f;
+  background-color: #1a1a1a;
   color: #fff;
-}
-
-.logo {
-  /*margin-right: 30px;*/
 }
 
 .logo-image {
@@ -284,8 +278,8 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  filter: brightness(0.7);
-  -webkit-filter: brightness(0.7);
+  filter: brightness(40%);
+  -webkit-filter: brightness(40%);
   mix-blend-mode: unset;
   background-image: url(img/Tundepj.jpg);
   backdrop-filter: blur(0.625rem);
@@ -456,26 +450,112 @@ body {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
-  display: grid;
-  grid-template-columns: 1fr;
+
   align-items: center;
 }
 
 .blog-heading {
   float: left;
+  margin-bottom: 2rem;
 }
 .all-article-heading {
   float: right;
   clear: both;
   display: flex;
+  margin-right: 5rem;
 }
 .latest {
   font-size: 2.5rem;
   color: #f3eff5;
 }
 
+.icon-tabler-article-filled-filled {
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .all-article-link {
   font-size: 1.5rem;
   color: #f3eff5;
   text-decoration: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card-box {
+  max-width: 130rem;
+  margin: 2rem 0;
+  border-radius: 10px; /* adjust this to control the roundness of the border */
+  box-shadow: -5px 0px 12px -5px #225276;
+}
+
+.how-it-started {
+  text-decoration: none;
+}
+
+.HowitStarted {
+  color: #f3eff5;
+  font-size: 1.75rem;
+  padding: 2rem;
+}
+
+.intro {
+  color: #aaa7ac;
+  font-size: 1.5rem;
+  line-height: 2;
+  letter-spacing: -0.5px;
+  padding: 2rem;
+}
+
+.section-footer {
+  background-color: #1a1a1a;
+  padding: 2rem 0;
+}
+
+.footer-box {
+  max-width: 130rem;
+  margin: 0 40rem;
+  text-align: center;
+  padding: 2rem 0;
+  border-radius: 10px; /* adjust this to control the roundness of the border */
+  box-shadow: -5px 0px 12px -5px #225276;
+}
+
+.get-in-touch {
+  color: #f3eff5;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.want-to-work {
+  font-size: 2rem;
+  color: floralwhite;
+  padding-bottom: 5rem;
+}
+
+.say-hell0:link,
+.say-hell0:visited {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #72c1ff;
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: #0a0a0a;
+  border-radius: 0.4375rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  transition: all 0.6s;
+}
+
+.say-hell0:hover,
+.say-hell0:active {
+  background-color: #222222;
 }
