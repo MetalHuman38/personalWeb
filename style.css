@@ -50,6 +50,7 @@ body {
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
+  position: relative;
 }
 
 /*****************************/
@@ -113,19 +114,11 @@ body {
   opacity: 0.8;
   outline: none;
   transition: transform 0.7s ease;
-  -webkit-transition: transform 0.7s ease;
-  -moz-transition: transform 0.7s ease;
-  -ms-transition: transform 0.7s ease;
-  -o-transition: transform 0.7s ease;
 }
 
 .linkend:hover .linkend-image {
   transform: translateY(-2px) translateZ(10px);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  -webkit-transform: translateY(-2px) translateZ(10px);
-  -moz-transform: translateY(-2px) translateZ(10px);
-  -ms-transform: translateY(-2px) translateZ(10px);
-  -o-transform: translateY(-2px) translateZ(10px);
 }
 
 .github {
@@ -137,18 +130,10 @@ body {
 .git-image {
   height: 1.875rem;
   transition: transform 0.6s ease;
-  -webkit-transition: transform 0.6s ease;
-  -moz-transition: transform 0.6s ease;
-  -ms-transition: transform 0.6s ease;
-  -o-transition: transform 0.6s ease;
 }
 
 .git-image:hover {
   transform: translateY(-3px) translateZ(10px);
-  -webkit-transform: translateY(-3px) translateZ(10px);
-  -moz-transform: translateY(-3px) translateZ(10px);
-  -ms-transform: translateY(-3px) translateZ(10px);
-  -o-transform: translateY(-3px) translateZ(10px);
 }
 
 .email {
@@ -166,8 +151,67 @@ body {
 /* Section Hero
 /*****************************/
 .section-hero {
-  background-color: #0d0d0d;
+  background-color: #000;
   padding: 4.8rem 0 9.6rem 0;
+}
+
+.cube-line-container {
+  position: relative;
+}
+
+.cube-container {
+  perspective: 1200px;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  transform: translate(-50%, 100%);
+}
+
+.cube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateZ(-45deg);
+  animation: rotate 5s infinite linear;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 46, 235, 0.7);
+  border: 1px solid #ccc;
+}
+
+.front {
+  transform: rotateY(0deg) translateZ(100px);
+}
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+}
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+}
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+}
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateX(60deg) rotateZ(-45deg);
+  }
+  to {
+    transform: rotateX(60deg) rotateZ(315deg);
+  }
 }
 
 .hero-box {
@@ -180,9 +224,16 @@ body {
   gap: 6.6rem;
 }
 
+.hero-profile {
+  position: relative;
+}
+
+/*****************************/
+/* Straight-line in header
+/*****************************/
 .straightline {
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 1rem;
 }
 
 .straightline::before {
@@ -207,7 +258,12 @@ body {
   margin: 0 auto;
 }
 
+/*****************************/
+/* Section Hero Component
+/*****************************/
+
 .hero-top-title {
+  padding-top: 1rem;
   color: #f3eff5;
 }
 
@@ -278,27 +334,23 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  filter: brightness(40%);
-  -webkit-filter: brightness(40%);
+  filter: brightness(80%);
+  -webkit-filter: brightness(80%);
   mix-blend-mode: unset;
   background-image: url(img/Tundepj.jpg);
   backdrop-filter: blur(0.625rem);
   border-radius: 0.9375rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   transition: transform 0.6s ease;
-  -webkit-border-radius: 0.9375rem;
-  -moz-border-radius: 0.9375rem;
-  -ms-border-radius: 0.9375rem;
-  -o-border-radius: 0.9375rem;
-  -webkit-transition: transform 0.6s ease;
-  -moz-transition: transform 0.6s ease;
-  -ms-transition: transform 0.6s ease;
-  -o-transition: transform 0.6s ease;
 }
 
 .hero-image:hover {
   transform: translateY(-10px) translateZ(20px);
 }
+
+/*****************************/
+/* Straight-line below hero
+/*****************************/
 
 .straightline-2 {
   position: relative;
@@ -324,10 +376,6 @@ body {
   transform: translateY(-50%);
   width: 130rem;
   margin: 0 auto;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
 }
 
 /*****************************/
@@ -335,8 +383,27 @@ body {
 /*****************************/
 
 .section-two {
-  background-color: #1a1a1a;
+  background-color: #0d0d0d;
   padding: 2rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-two::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  background-image: url("img/scimage1.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  opacity: 0.1;
+  z-index: -1;
+  border-radius: 0.9375rem;
+  box-shadow: 0 0 1rem 1rem #0d0d0d;
 }
 
 .skillset-box-1 {
@@ -363,6 +430,10 @@ body {
   animation: fade-in 3s ease-in-out forwards infinite;
   -webkit-animation: fade-in 3s ease-in-out forwards infinite;
 }
+
+/*****************************/
+/* Animation component
+/*****************************/
 
 @keyframes fade-in {
   from {
@@ -409,15 +480,7 @@ body {
   border-radius: 0.3125rem;
   font-weight: 200;
   margin-bottom: 2rem;
-  -webkit-border-radius: 0.3125rem;
-  -moz-border-radius: 0.3125rem;
-  -ms-border-radius: 0.3125rem;
-  -o-border-radius: 0.3125rem;
   transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
 }
 
 .scroll-link-two:hover,
@@ -440,6 +503,10 @@ body {
   font-weight: bold;
   color: #333;
 }
+
+/*****************************/
+/* Section Blog
+/*****************************/
 
 .section-blog {
   background-color: #0d0d0d;
@@ -490,7 +557,7 @@ body {
 .card-box {
   max-width: 130rem;
   margin: 2rem 0;
-  border-radius: 10px; /* adjust this to control the roundness of the border */
+  border-radius: 10px;
   box-shadow: -5px 0px 12px -5px #225276;
 }
 
@@ -512,8 +579,12 @@ body {
   padding: 2rem;
 }
 
+/*****************************/
+/* Section Footer
+/*****************************/
+
 .section-footer {
-  background-color: #1a1a1a;
+  background-color: #0d0d0d;
   padding: 2rem 0;
 }
 
