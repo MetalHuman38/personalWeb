@@ -17,7 +17,7 @@ Default: 1
 Colors:
 Primary - #1c0b19
 Tints - #1a1a1a
-Shades - #72c1ff, #447499, #223a4c,#172733
+Shades - #72c1ff, #447499, #223a4c,#172733,#5603ad,#b28950
 Accents
 Grey
 
@@ -153,6 +153,7 @@ body {
 .section-hero {
   background-color: #000;
   padding: 4.8rem 0 9.6rem 0;
+  background: linear-gradient(to top, #120e08, #041922);
 }
 
 .cube-line-container {
@@ -187,21 +188,30 @@ body {
 }
 
 .front {
+  background: linear-gradient(rgba(170, 87, 5, 0.6), rgba(96, 81, 3, 0.1));
   transform: rotateY(0deg) translateZ(100px);
 }
 .back {
+  background: linear-gradient(rgba(2, 91, 99, 0.6), rgba(255, 255, 255, 0.1));
   transform: rotateY(180deg) translateZ(100px);
 }
 .left {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.1)
+  );
   transform: rotateY(-90deg) translateZ(100px);
 }
 .right {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(143, 25, 25, 0.1));
   transform: rotateY(90deg) translateZ(100px);
 }
 .top {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(10, 32, 171, 0.1));
   transform: rotateX(90deg) translateZ(100px);
 }
 .bottom {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(3, 97, 89, 0.1));
   transform: rotateX(-90deg) translateZ(100px);
 }
 
@@ -345,6 +355,10 @@ body {
 }
 
 .hero-image:hover {
+  transform: translateY(-10px) translateZ(20px);
+}
+
+.hero-image.animate {
   transform: translateY(-10px) translateZ(20px);
 }
 
@@ -558,7 +572,13 @@ body {
   max-width: 130rem;
   margin: 2rem 0;
   border-radius: 10px;
-  box-shadow: -5px 0px 12px -5px #225276;
+  box-shadow: -5px 0px 5px -5px #225276;
+  background-color: #032842;
+}
+
+.card-box-1 {
+  background-color: #041922;
+  border-radius: 10px;
 }
 
 .how-it-started {
