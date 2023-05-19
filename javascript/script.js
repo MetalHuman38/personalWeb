@@ -7,3 +7,6 @@ heroImage.addEventListener("mouseenter", () => {
 heroImage.addEventListener("mouseleave", () => {
   heroImage.classList.remove("animate");
 });
+
+const currentYear = new Date().getFullYear();
+document.getElementById("current-year").textContent = currentYear;

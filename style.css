@@ -66,7 +66,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  background-color: #1a1a1a;
+  background-color: #1b272c;
   color: #fff;
 }
 
@@ -76,6 +76,7 @@ body {
   filter: brightness(0.8);
   -webkit-filter: brightness(0.8);
   mix-blend-mode: unset;
+  border-radius: 10px;
 }
 
 .writing {
@@ -319,15 +320,7 @@ body {
   text-decoration: none;
   border-radius: 0.3125rem;
   font-weight: 200;
-  -webkit-border-radius: 0.3125rem;
-  -moz-border-radius: 0.3125rem;
-  -ms-border-radius: 0.3125rem;
-  -o-border-radius: 0.3125rem;
   transition: all 0.3s;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  -o-transition: all 0.3s;
 }
 
 .scroll-link:hover,
@@ -344,8 +337,8 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
-  filter: brightness(80%);
-  -webkit-filter: brightness(80%);
+  filter: brightness(60%);
+  -webkit-filter: brightness(60%);
   mix-blend-mode: unset;
   background-image: url(img/Tundepj.jpg);
   backdrop-filter: blur(0.625rem);
@@ -397,10 +390,10 @@ body {
 /*****************************/
 
 .section-two {
-  background-color: #0d0d0d;
   padding: 2rem 0;
   position: relative;
-  z-index: 1;
+  z-index: 0;
+  background: linear-gradient(to top, #120e08, #041922);
 }
 
 .section-two::before {
@@ -442,7 +435,6 @@ body {
   opacity: 0;
   transform: translateY(20px);
   animation: fade-in 3s ease-in-out forwards infinite;
-  -webkit-animation: fade-in 3s ease-in-out forwards infinite;
 }
 
 /*****************************/
@@ -579,6 +571,12 @@ body {
 .card-box-1 {
   background-color: #041922;
   border-radius: 10px;
+  margin: 2rem 0;
+}
+
+.card-box-2 {
+  background-color: #16054b;
+  border-radius: 10px;
 }
 
 .how-it-started {
@@ -604,8 +602,8 @@ body {
 /*****************************/
 
 .section-footer {
-  background-color: #0d0d0d;
   padding: 2rem 0;
+  background: linear-gradient(to top, #120e08, #041922);
 }
 
 .footer-box {
@@ -613,8 +611,8 @@ body {
   margin: 0 40rem;
   text-align: center;
   padding: 2rem 0;
-  border-radius: 10px; /* adjust this to control the roundness of the border */
-  box-shadow: -5px 0px 12px -5px #225276;
+  border-radius: 10px;
+  border: 5px solid #223a4c;
 }
 
 .get-in-touch {
@@ -636,10 +634,10 @@ body {
 .say-hell0:visited {
   font-size: 2rem;
   text-decoration: none;
-  color: #72c1ff;
+  color: #f3eff5;
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: #0a0a0a;
+  background-color: #60935d;
   border-radius: 0.4375rem;
   font-weight: 700;
   margin-bottom: 2rem;
@@ -648,5 +646,37 @@ body {
 
 .say-hell0:hover,
 .say-hell0:active {
-  background-color: #222222;
+  color: #a7d3db;
+}
+
+.extra-details {
+  margin: 0 40rem;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.resuming {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.designed {
+  font-size: 2rem;
+  color: #ffffff;
+  padding: 1.5rem;
+}
+
+.copyright {
+  color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  background-color: #041922;
+  padding: 10px;
+  font-size: 1.5rem;
+  margin-right: 5px;
+  width: 100%;
+  box-sizing: border-box;
 }
