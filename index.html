@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,33 +15,8 @@
     <script defer src="javascript/script.js"></script>
     <title>thinkAlike</title>
   </head>
-  <body>
-    <div class="custom-cursor"></div>
-    <header class="header">
-      <div class="logo">
-<img class="logo-image" alt="owner logo" src="img/logo.png"/>
-</div>
-<nav>
-  <ul class="git-email-link">
-    <li>
-      <a class="writing" href="#section-two" >Writing</a>
-    </li>
-    <li>
-      <a class="linkend" href="https://www.linkedin.com/in/babatunde-kalejaiye-729248125/">
-        <img class="linkend-image" src="img/linkend.png" alt="GitHub">
-      </a>
-    </li>
-    <li>
-      <a class="github" href="https://github.com/MetalHuman38">
-        <img class="git-image" src="img/github.png" alt="GitHub">
-      </a>
-    </li>
-    <li>
-      <a class="email" href="mailto:yourname@example.com">babsdevprogrammer@icloud.com</a>
-    </li>
-  </ul>
-</nav>
-    </header>
+  <body class="main-page">
+    <div id="header-placeholder"></div>
     <main>
     <section class="section-hero">
       <div class="cube-line-container">
@@ -82,11 +57,11 @@
             <span>back-end &</span>
             <span>User Experience</span>
           </h1>
-          <a class="scroll-link-two" href="#" >CONTACT ME&darr;</a>
+          <a class="scroll-link-two" href="portfolio/index.html" target="_blank" rel="noopener noreferrer" >EXPLORE MY WORK&darr;</a>
         </div>
           <div class="special-skill">
             <p class="My-Skill">
-              I specialize in exceptional web application development. With expertise in front-end and back-end development, I write clean, efficient code for a superb user experience. Proficient in HTML, CSS, C++,JavaScript, Node.js, and Python, I build scalable, high-performance systems. Experienced with React, Angular, and Django frameworks, I prioritize exceeding user expectations. I take pride in writing maintainable code that's easily understood and extended by fellow developers. If you're seeking an efficient C++ engineer to bring your vision to life and make a real impact, let's connect!
+              I specialize in exceptional web application development. With expertise in front-end and back-end development, I write clean, efficient code for a superb user experience. Proficient in HTML, CSS, C++, I take pride in writing maintainable code that's easily understood and extended by fellow developers. If you're seeking an efficient Software engineer to bring your vision to life and make a real impact, let's connect!
             </p>
           </div>
         </div>
@@ -102,7 +77,7 @@
             </h1>
           </div>
           <div class="all-article-heading">
-          <a class="all-article-link" href="#">
+          <a class="all-article-link" href="allArticles/allarticles.html">
             All Articles
             <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-article-filled-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -112,7 +87,7 @@
           </div>
           <div class="clearfix"></div>
           <div class="card-box">
-              <a class="how-it-started" href="#">
+              <a class="how-it-started" href="allArticles/a-leap-into-the-unknow.html">
                 <h3 class="HowitStarted">
                   A Leap into the Unknown: My Transition from Marketing to Tech.
                 </h3>
@@ -122,22 +97,22 @@
               </a>
           </div>
           <div class="card-box-1">
-            <a class="how-it-started" href="#">
+            <a class="how-it-started" href="allArticles/rewinding-time.html">
               <h3 class="HowitStarted">
-                A Leap into the Unknown: My Transition from Marketing to Tech.
+                "Rewinding Time: 10 Years Back, 10 Life Changes I'd Make"
               </h3>
               <p class="intro">
-                Venturing beyond the familiar buzz of marketing, I took a bold leap into the electrifying realm of technology. Walk with me as I recount my journey - the excitement, the challenges, the transformation - from orchestrating ad campaigns to mastering the art of code and innovation.
+                Reclaiming the Past: Envisioning a Decade Re-do with 10 Bold Life Alterations.
               </p>
             </a>
         </div>
         <div class="card-box-2">
-          <a class="how-it-started" href="#">
+          <a class="how-it-started" href="allArticles/rewrite-learning-curve.html">
             <h3 class="HowitStarted">
-              A Leap into the Unknown: My Transition from Marketing to Tech.
+            Rewriting the Learning Curve: Leveraging Present Wisdom for Past Skill Acquisition
             </h3>
             <p class="intro">
-              Venturing beyond the familiar buzz of marketing, I took a bold leap into the electrifying realm of technology. Walk with me as I recount my journey - the excitement, the challenges, the transformation - from orchestrating ad campaigns to mastering the art of code and innovation.
+              Charting a New Course: A Thought-Provoking Exploration of How Current Knowledge Can Radically Alter Past Skill Learning Journeys.
             </p>
           </a>
       </div>
@@ -145,22 +120,25 @@
       </div>
       <div class="straightline-2"></div>
     </section>
-  <footer class="section-footer">
-      <h3 class="get-in-touch">Get in Touch</h3>
-      <div class="footer-box">
-        <p class="want-to-work">Want to work together or Have a Question? </p>
-        <a class="say-hell0" href="mailto:babsdevprogrammer@icloud.com">Say Hello 👋</a>
-    </div>
-    <div class="extra-details">
-      <a class="resuming" href="#"> Resume</a>
-      <p class="designed">Designed and Developed by Me.</p>
-    </div>
-    <div class="copyright">
-      <span>&copy;</span>
-      <span class="company">MetalBrain. All rights reserved.</span>
-      <span id="current-year"></span>
-    </div>
-  </footer>
 </main>
+<footer class="section-footer">
+  <h3 class="get-in-touch">Get in Touch</h3>
+  <div class="footer-box">
+    <p class="want-to-work">Want to work together or Have a Question?</p>
+    <a
+      class="say-hell0"
+      href="mailto:babsdevprogrammer@icloud.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      >Say Hello 👋</a
+    >
+  </div>
+  <div class="extra-details">
+    <a class="resuming" href="#"> Resume</a>
+    <p class="designed">Designed and Developed by Me.</p>
+  </div>
+</footer>
+<div id="custom-cursor"></div>
+<div id="footer-placeholder"></div>
   </body>
 </html>

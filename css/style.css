@@ -41,16 +41,17 @@ html {
   font-size: 62.5%;
 }
 
-body {
+.main-page {
   font-family: "Alice", serif;
   background-color: #000;
   line-height: 1;
   font-weight: 700;
-  border: 3px solid #223a4c;
+  border: 3px solid #064a52;
   margin: 0;
   padding: 20px;
   box-sizing: border-box;
   position: relative;
+  cursor: none;
 }
 
 /*****************************/
@@ -60,6 +61,20 @@ body {
 /*****************************/
 /* Header
 /*****************************/
+
+#custom-cursor {
+  position: absolute;
+  pointer-events: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 3px solid #064a52;
+  box-sizing: border-box;
+  background-size: 200% 200%;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease-out, height 0.2s ease-out;
+}
 
 .header {
   display: flex;
@@ -262,7 +277,7 @@ body {
   top: 50%;
   left: 0;
   right: 0;
-  border-top: 1px solid #72c1ff;
+  border-top: 1px solid #064a52;
   /* Additional styles */
   transform: translateY(-50%);
   width: 100%;
@@ -292,7 +307,7 @@ body {
   font-size: 1.7em;
   top: -0.4em;
   right: -0.3em;
-  color: #447499;
+  color: #064a52;
 }
 
 .About-me {
@@ -308,7 +323,7 @@ body {
 .About-me:first-letter {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #064a52;
 }
 
 .scroll-link:link,
@@ -379,7 +394,7 @@ body {
   top: 50%;
   left: 0;
   right: 0;
-  border-top: 1px solid #72c1ff;
+  border-top: 1px solid #064a52;
   transform: translateY(-50%);
   width: 130rem;
   margin: 0 auto;
@@ -424,9 +439,10 @@ body {
 }
 
 .skillset-title {
-  color: #72c1ff;
+  color: #064a52;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 .skill-description span {
@@ -507,7 +523,7 @@ body {
 .My-Skill:first-letter {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #064a52;
 }
 
 /*****************************/
@@ -523,7 +539,6 @@ body {
   max-width: 130rem;
   margin: 0 auto;
   padding: 0 3.2rem;
-
   align-items: center;
 }
 
@@ -637,7 +652,7 @@ body {
   color: #f3eff5;
   display: inline-block;
   padding: 0.625rem 1.25rem;
-  background-color: #60935d;
+  background-color: #042c31;
   border-radius: 0.4375rem;
   font-weight: 700;
   margin-bottom: 2rem;

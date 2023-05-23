@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /*font-size 10px */
+  /*10px / 16px = 0.625% */
+  /* Percentage of user's browser font settings*/
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Alice", serif;
+  background-color: #e6e6e6;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.project-1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 7rem;
+  color: #112a46;
+}
