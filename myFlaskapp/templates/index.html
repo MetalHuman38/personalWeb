@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,12 +11,13 @@
       href="https://fonts.googleapis.com/css2?family=Alice&display=swap"
       rel="stylesheet"
     />
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script defer src="javascript/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>thinkAlike</title>
   </head>
   <body class="main-page">
-    <div id="header-placeholder"></div>
+    <div id="header-placeholder">
+      {% include 'header.html' %}
+    </div>
     <main>
     <section class="section-hero">
       <div class="cube-line-container">
@@ -39,13 +40,25 @@
           <p class="About-me">
             Welcome to my page! I'm a passionate Software Engineer dedicated to creating amazing things with technology. I'm fascinated by how technology can transform our world and improve lives. With a focus on creativity, collaboration, and innovation, I love working with others to find unique solutions to complex problems. Whether it's building new applications or enhancing existing systems, my goal is to deliver the best user experience possible. If you're seeking a driven, creative, and challenge-loving software engineer, you've found the right person. Let's work together and bring your ideas to life!
           </p>
-          <a class="scroll-link" href="#section-two" >SCROLL FOR MORE &darr;</a>
+          <button id="cta-button" class="cta-button">Join Our Community!</button>
         </div>
         <div class="Hero-image-box">
-          <img src="img/timage2.jpg" class="hero-image" alt="Website owner" />
+          <img src="/static/img/timage2.jpg" class="hero-image" alt="Website owner" />
         </div>
       </div>
       <div class="straightline-2"></div>
+      <div class="straightline-2"></div>
+      <!-- Subscription form inside a hidden modal -->
+      <div id="modal-backdrop" class="modal-backdrop"></div>
+      <div id="subscription-modal" class="modal" style="display:none;">
+        <form action="/submit_form" method="POST">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <button id="close-modal-button">Close</button>
     </section>
     <section class="section-two">
       <div class="skillset-box-1">
@@ -57,7 +70,7 @@
             <span>back-end &</span>
             <span>User Experience</span>
           </h1>
-          <a class="scroll-link-two" href="portfolio/index.html" target="_blank" rel="noopener noreferrer" >EXPLORE MY WORK&darr;</a>
+          <a class="scroll-link-two" href="{{ url_for('portfolio') }}">EXPLORE MY WORK</a>
         </div>
           <div class="special-skill">
             <p class="My-Skill">
@@ -87,17 +100,18 @@
           </div>
           <div class="clearfix"></div>
           <div class="card-box">
-              <a class="how-it-started" href="allArticles/a-leap-into-the-unknow.html">
-                <h3 class="HowitStarted">
-                  A Leap into the Unknown: My Transition from Marketing to Tech.
-                </h3>
-                <p class="intro">
-                  Venturing beyond the familiar buzz of marketing, I took a bold leap into the electrifying realm of technology. Walk with me as I recount my journey - the excitement, the challenges, the transformation - from orchestrating ad campaigns to mastering the art of code and innovation.
-                </p>
-              </a>
+            <a class="how-it-started" href="{{ url_for('article_leap_into_unknown') }}">
+              <h3 class="HowitStarted">
+                A Leap into the Unknown: My Transition from Marketing to Tech.
+              </h3>
+              <p class="intro">
+                Venturing beyond the familiar buzz of marketing, I took a bold leap into the electrifying realm of technology. Walk with me as I recount my journey - the excitement, the challenges, the transformation - from orchestrating ad campaigns to mastering the art of code and innovation.
+              </p>
+            </a>
+
           </div>
           <div class="card-box-1">
-            <a class="how-it-started" href="allArticles/rewinding-time.html">
+            <a class="how-it-started" href="{{ url_for('rewinding_time') }}">
               <h3 class="HowitStarted">
                 "Rewinding Time: 10 Years Back, 10 Life Changes I'd Make"
               </h3>
@@ -107,7 +121,7 @@
             </a>
         </div>
         <div class="card-box-2">
-          <a class="how-it-started" href="allArticles/rewrite-learning-curve.html">
+          <a class="how-it-started" href="{{ url_for('rewrite_learning_curve') }}">
             <h3 class="HowitStarted">
             Rewriting the Learning Curve: Leveraging Present Wisdom for Past Skill Acquisition
             </h3>
@@ -137,8 +151,11 @@
     <a class="resuming" href="#"> Resume</a>
     <p class="designed">Designed and Developed by Me.</p>
   </div>
+  <div id="footer-placeholder">
+    {% include 'footer.html' %}
+  </div>
 </footer>
 <div id="custom-cursor"></div>
-<div id="footer-placeholder"></div>
+<script src="/static/javascript/script.js"></script>
   </body>
 </html>

@@ -37,12 +37,19 @@ if (magnifier !== null) {
   });
 }
 
-$(function () {
-  $("#header-placeholder").load("/header.html");
+$("#header-placeholder").load("/static/header.html");
+$("#footer-placeholder").load("/static/footer.html");
+
+document.getElementById("cta-button").addEventListener("click", function () {
+  document.getElementById("subscription-modal").style.display = "block";
+  document.getElementById("modal-backdrop").style.display = "block";
 });
 
-$(function () {
-  $("#footer-placeholder").load("/footer.html");
-});
+document
+  .getElementById("close-modal-button")
+  .addEventListener("click", function () {
+    document.getElementById("subscription-modal").style.display = "none";
+    document.getElementById("modal-backdrop").style.display = "none";
+  });
 
 alert($().jquery);

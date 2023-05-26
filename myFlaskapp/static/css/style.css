@@ -326,6 +326,55 @@ html {
   color: #064a52;
 }
 
+.cta-button {
+  display: inline-block;
+  background-color: #064a52;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #010f10;
+}
+
+#subscription-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 500px;
+  background: #064a52;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#subscription-modal h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+#subscription-modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#subscription-modal input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 .scroll-link:link,
 .scroll-link:visited {
   display: inline-block;
@@ -355,7 +404,7 @@ html {
   filter: brightness(60%);
   -webkit-filter: brightness(60%);
   mix-blend-mode: unset;
-  background-image: url(img/Tundepj.jpg);
+  background-image: url(/static/img/Tundepj.jpg);
   backdrop-filter: blur(0.625rem);
   border-radius: 0.9375rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -418,7 +467,7 @@ html {
   left: 0;
   width: 100%;
   height: 80%;
-  background-image: url("img/scimage1.png");
+  background-image: url("/static/img/scimage1.png");
   background-position: left;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -495,12 +544,13 @@ html {
 .scroll-link-two:link,
 .scroll-link-two:visited {
   display: inline-block;
-  padding: 0.625rem 1.25rem;
+  padding: 1rem 1rem;
   background-color: #333;
   color: #f3eff5;
   text-decoration: none;
   border-radius: 0.3125rem;
-  font-weight: 200;
+  font-weight: 500;
+  font-size: 1.2rem;
   margin-bottom: 2rem;
   transition: all 0.3s;
 }

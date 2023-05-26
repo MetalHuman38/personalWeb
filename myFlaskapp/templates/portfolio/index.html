@@ -2,8 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="/css/style.css" rel="stylesheet" />
-    <link href="portfolio.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/static/portfolio.css" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,11 +13,10 @@
       rel="stylesheet"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script defer src="../javascript/script.js"></script>
     <title>Projects</title>
   </head>
   <body class="portfolio-body">
-    <div id="header-placeholder"></div>
+    <div id="header-placeholder">{% include 'header.html' %}</div>
     <section class="project-section">
       <div class="project-container">
         <div class="project-1">
@@ -25,6 +24,7 @@
         </div>
       </div>
     </section>
-    <div id="footer-placeholder"></div>
+    <div id="footer-placeholder">{% include 'footer.html' %}</div>
+    <script src="/static/javascript/script.js"></script>
   </body>
 </html>
