@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/dist/output.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,13 +36,32 @@
       </div>
       <div class="hero-box">
         <div class="hero-profile">
-          <div class="straightline"></div>
           <h1 class="hero-top-title">Hello, It's me</h1>
           <h1 class="Name">Babatunde<span class="last-dot"></spa></h1>
           <p class="About-me">
             Welcome to my page! I'm a passionate Software Engineer dedicated to creating amazing things with technology. I'm fascinated by how technology can transform our world and improve lives. With a focus on creativity, collaboration, and innovation, I love working with others to find unique solutions to complex problems. Whether it's building new applications or enhancing existing systems, my goal is to deliver the best user experience possible. If you're seeking a driven, creative, and challenge-loving software engineer, you've found the right person. Let's work together and bring your ideas to life!
           </p>
           <button id="cta-button" class="cta-button">Join Our Community!</button>
+
+          <div class="testimonial-section">
+            <div class="testimonial">
+                <img src="/static/img/customer-6.jpg" alt="Testimonial 1">
+                <p>"This community is amazing! I've learned so much."</p>
+                <p>- Lola</p>
+            </div>
+
+            <div class="testimonial">
+                <img src="/static/img/hannah.jpg" alt="Testimonial 2">
+                <p>"I'm so grateful for the support I've received here."</p>
+                <p>- Hannah</p>
+            </div>
+
+            <div class="testimonial">
+                <img src="/static/img/dave.jpg" alt="Testimonial 3">
+                <p>"I've met some of the most inspiring people in this community."</p>
+                <p>- Dave</p>
+            </div>
+        </div>
         </div>
         <div class="Hero-image-box">
           <img src="/static/img/timage2.jpg" class="hero-image" alt="Website owner" />
@@ -90,7 +111,7 @@
             </h1>
           </div>
           <div class="all-article-heading">
-          <a class="all-article-link" href="allArticles/allarticles.html">
+          <a class="all-article-link" href="{{ url_for('all_article') }}">
             All Articles
             <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler-article-filled-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
