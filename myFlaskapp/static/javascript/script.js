@@ -37,8 +37,8 @@ if (magnifier !== null) {
   });
 }
 
-$("#header-placeholder").load("/static/header.html");
-$("#footer-placeholder").load("/static/footer.html");
+$("#header-placeholder").load("/myFlaskapp/static/header.html");
+$("#footer-placeholder").load("/myFlaskapp/static/footer.html");
 
 document.getElementById("cta-button").addEventListener("click", function () {
   document.getElementById("subscription-modal").style.display = "block";

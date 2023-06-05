@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link href="/dist/static/css/style.css" rel="stylesheet" />
-
+    <link href="/dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
     <link href="/css/style.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="article-styles.css" />
@@ -12,16 +11,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>All-Articles</title>
   </head>
-  <body class="all-articles-body">
+  <body class="all-article-body">
     <div id="header-placeholder">{% include 'header.html' %}</div>
 
     <div class="grid grid-cols-2 sm:grid-cols-1 gap-4">
-      <a href="article1.html" class="article">Article 1</a>
-      <a href="article2.html" class="article">Article 2</a>
+      <a href="article1.html" class="article text-lg no-underline">Article 1</a>
+      <a href="article2.html" class="article text-lg no-underline">Article 2</a>
       <!-- Add more articles as needed -->
     </div>
 
     <div id="footer-placeholder">{% include 'footer.html' %}</div>
-    <script src="/static/javascript/script.js"></script>
+    <script src="../static/javascript/script.js"></script>
   </body>
 </html>

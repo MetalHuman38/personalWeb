@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx tailwindcss -i myFlaskapp/static/css/style.css -o ./dist/output.css --watch"
+    "dev": "tailwindcss build -i myFlaskapp/static/css/style.css -o myFlaskapp/static/dist/output.css --watch"
   },
   "keywords": [],
-  "author": {},
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^10.4.14",

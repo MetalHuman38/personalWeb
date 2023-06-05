@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./thinkAlike/myFlaskapp/templates/**/*.html'",
-    "./thinkAlike/myFlaskapp/static/javascript/script.js",
+    "./myFlaskapp/templates/**/*.html'",
+    "./myFlaskapp/static/javascript/script.js",
   ],
   theme: {
     extend: {},

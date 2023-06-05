@@ -27,11 +27,11 @@ difference,
 
 */
 
-@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Alice&display=swap");
 
 * {
   margin: 0;
@@ -94,7 +94,6 @@ html {
   width: 2.5rem;
   height: auto;
   filter: brightness(0.8);
-  -webkit-filter: brightness(0.8);
   mix-blend-mode: unset;
   border-radius: 10px;
 }
@@ -433,7 +432,7 @@ html {
   filter: brightness(60%);
   -webkit-filter: brightness(60%);
   mix-blend-mode: unset;
-  background-image: url(/static/img/Tundepj.jpg);
+  background-image: url(/myFlaskapp/static/img/Tundepj.jpg);
   backdrop-filter: blur(0.625rem);
   border-radius: 0.9375rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -496,7 +495,7 @@ html {
   left: 0;
   width: 100%;
   height: 80%;
-  background-image: url("/static/img/scimage1.png");
+  background-image: url("/myFlaskapp/static/img/scimage1.png");
   background-position: left;
   background-repeat: no-repeat;
   background-size: 60%;
@@ -582,6 +581,8 @@ html {
   font-size: 1.2rem;
   margin-bottom: 2rem;
   transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 10px #fff;
 }
 
 .scroll-link-two:hover,
